@@ -1,2 +1,2 @@
-# teste_trusthub
+# teste-trusthub
 Teste para a TrustHUB SRM
