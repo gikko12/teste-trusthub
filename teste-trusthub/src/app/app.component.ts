@@ -4,4 +4,11 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
-export class AppComponent { }
+export class AppComponent {
+  openMenu = true;
+
+  toogleMenu(openMenu) {
+    this.openMenu = openMenu;
+    window.dispatchEvent(new Event('resize'));
+  }
+}

@@ -1,0 +1,141 @@
+@import 'src/app/shared/styles/variables';
+
+.header {
+    min-height: 65px;
+    background-color: $color-white;
+    margin-left: 0;
+
+    ::ng-deep {
+        .icon-menu {
+            font-size: 40px;
+            margin: 10px 20px;
+        }
+    }
+
+    .logo {
+        width: 185px;
+    }
+
+    .economic-group {
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+
+        span {
+            font-size: 16px;
+            line-height: 22px;
+            color: $color-shark;
+        }
+
+        ::ng-deep {
+            .ng-select {
+                width: 180px;
+                margin-left: 10px;
+                font-size: 16px;
+                line-height: 22px;
+                border: 1px solid $color-shakespeare;
+                height: 45px;
+                color: $color-gray;
+
+                .ng-select-container {
+                    height: 100%;
+                    border-radius: 0;
+
+                    .ng-value-container {
+                        .ng-placeholder {
+                            color: $color-gray;
+                        }
+                    }
+
+                    .ng-clear-wrapper {
+                        display: none;
+                    }
+
+                    .ng-arrow-wrapper {
+                        .ng-arrow {
+                            background: url("/assets/img/double-arrow-down.png") no-repeat right $color-white;
+                            border: none;
+                            width: 16px;
+                            height: 16px;
+                            margin-right: 10px;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+
+                .ng-dropdown-panel {
+                    .ng-option {
+                        border-radius: 0;
+
+                        .ng-option-label {
+                            font-size: 14px;
+                            line-height: 20px;
+                            font-weight: normal;
+                            color: $color-gray;
+
+                            &:hover,
+                            &:focus {
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .user-info {
+        width: 100%;
+
+        .user-data {
+            background-color: $color-midnight;
+            color: $color-white;
+            height: 45px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            ::ng-deep {
+                .icon-user {
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+
+                .icon-details {
+                    margin-right: 20px;
+                    color: $color-shakespeare;
+                }
+            }
+        }
+
+        .notification {
+            background-color: $color-shakespeare;
+            color: $color-white;
+            height: 45px;
+            margin-top: 10px;
+
+            ::ng-deep {
+                .icon-notification {
+                    margin: 12px 5px;
+                    font-size: 20px;
+                }
+            }
+
+            .count-notifications {
+                text-align: center;
+                display: block;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: $color-red;
+                color: $color-white;
+                font-size: 12px;
+                line-height: 14px;
+                position: relative;
+                bottom: 40px;
+                left: 10px;
+            }
+        }
+    }
+}

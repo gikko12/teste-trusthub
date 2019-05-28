@@ -1,25 +1,16 @@
 <section>
   <div class="wrapper">
-    <app-menu></app-menu>
+    <app-menu [openMenu]="openMenu"></app-menu>
 
-    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper flex">
-      <!-- Main content -->
       <section class="content">
+        <app-page-header (menuToogle)="toogleMenu($event)"></app-page-header>
         <div class="row">
-          <div class="col-xs-12">
-              <app-page-header></app-page-header>
-          </div>
-        </div>
-        <!-- Main row -->
-        <div class="row">
-          <section class="col-xs-12">
+          <section class="col-12">
             <router-outlet></router-outlet>
           </section>
         </div>
-        <!-- /.row (main row) -->
       </section>
-      <!-- /.content -->
     </div>
   </div>
   <!-- ./wrapper -->

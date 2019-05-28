@@ -1,5 +1,5 @@
 {
-  "menu" : [
+  "menu": [
     {
       "order": 1,
       "icon": "globe",
@@ -17,6 +17,34 @@
       "icon": "chart-bar",
       "description": "Ant. de Recebíveis",
       "route": "/antecip-recebiveis"
+    }
+  ],
+  "economic-group": [
+    {
+      "id": 1,
+      "description": "Visão Agregada 1"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Sandra Oliveira",
+      "email": "sandra.oliveira@srm.com.br",
+      "phone": "(11) 98752-9844"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "subject": "Teste"
+    },
+    {
+      "id": 2,
+      "subject": "Teste"
+    },
+    {
+      "id": 3,
+      "subject": "Teste"
     }
   ]
 }
