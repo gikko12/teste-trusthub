@@ -4,19 +4,19 @@
       "order": 1,
       "icon": "globe",
       "description": "Painel de Gestão",
-      "route": "/home"
+      "route": "/home/painel-gestao"
     },
     {
       "order": 2,
       "icon": "at",
       "description": "Conta Digital",
-      "route": "/conta-digital"
+      "route": "/home/conta-digital"
     },
     {
       "order": 3,
       "icon": "chart-bar",
       "description": "Ant. de Recebíveis",
-      "route": "/antecip-recebiveis"
+      "route": "/home/antecip-recebiveis"
     }
   ],
   "economic-group": [

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { MockService } from '../services/mock-service';
 import { finalize } from 'rxjs/operators';
 
@@ -8,9 +8,9 @@ import { finalize } from 'rxjs/operators';
   styleUrls: ['./page-header.component.scss']
 })
 export class PageHeaderComponent implements OnInit {
+  @Input() openMenu: boolean;
+
   @Output() menuToogle = new EventEmitter<boolean>();
-  
-  openMenu = true;
 
   selectedEconomicGroup = 1;
   economicGroups: any[];

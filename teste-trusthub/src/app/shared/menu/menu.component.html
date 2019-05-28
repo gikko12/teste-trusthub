@@ -1,5 +1,6 @@
 <nav id="sidebar" class="animated {{openMenu ? 'fadeInLeft' : 'fadeOutLeft'}}" [class.closed]="!openMenu">
   <div class="sidebar-header">
+    <fa-icon [icon]="['fas', 'times']" [classes]="['icon-menu']" tabindex="0" (click)="toogleMenu()"></fa-icon>
     <input class="menu-filter" [(ngModel)]="text" (ngModelChange)="changeFilter($event)" placeholder="Pesquise Aqui">
     <fa-icon icon="search" [classes]="['get-menu']"></fa-icon>
   </div>

@@ -15,8 +15,8 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
-  { path: '**', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: 'app/home/home.module#HomeModule' },
+  { path: 'home', loadChildren: 'app/home/home.module#HomeModule', data: { breadcrumb: 'Página Inicial', showBreadcrumb: true } },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({

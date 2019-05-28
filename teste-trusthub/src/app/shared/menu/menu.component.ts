@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, EventEmitter, Output } from '@angular/core';
 import { MockService } from '../services/mock-service';
 import { finalize, debounceTime, distinctUntilChanged, switchMap, map } from 'rxjs/operators';
 import { Subject } from 'rxjs/Subject';
@@ -12,6 +12,8 @@ import { Observable } from 'rxjs/Observable';
 })
 export class MenuComponent implements OnInit, OnDestroy {
   @Input() openMenu: boolean;
+
+  @Output() menuToogle = new EventEmitter<boolean>();
   
   text: string;
   filter = new Subject<string>();
@@ -37,6 +39,10 @@ export class MenuComponent implements OnInit, OnDestroy {
         err => console.log(err)
       );
     this.filter.next('');
+  }
+
+  toogleMenu() {
+    this.menuToogle.emit(!this.openMenu);
   }
 
   getMenu(text): Observable<any> {
