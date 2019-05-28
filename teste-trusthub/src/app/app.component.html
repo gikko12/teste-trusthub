@@ -1,36 +1,25 @@
-<section class="hold-transition skin-blue sidebar-mini">
+<section>
   <div class="wrapper">
-    <app-page-header></app-page-header>
+    <app-menu></app-menu>
 
-    <!-- Sidebar and content -->
-    <div class="sidebar-and-content flex-row">
-      <aside id='main-sidebar' class="main-sidebar animated fadeInLeft">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar-section">
-          <!-- Sidebar user panel -->
-          <app-menu></app-menu>
-          <!-- sidebar menu: : style can be found in sidebar.less -->
-        </section>
-        <!-- /.sidebar -->
-      </aside>
-
-      <div class="control-sidebar-bg"></div>
-
-      <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper flex">
-        <!-- Main content -->
-        <section class="content">
-          <!-- Main row -->
-          <div class="row">
-            <section class="col-lg-12">
-              <router-outlet></router-outlet>
-            </section>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper flex">
+      <!-- Main content -->
+      <section class="content">
+        <div class="row">
+          <div class="col-xs-12">
+              <app-page-header></app-page-header>
           </div>
-          <!-- /.row (main row) -->
-        </section>
-        <!-- /.content -->
-      </div>
-
+        </div>
+        <!-- Main row -->
+        <div class="row">
+          <section class="col-xs-12">
+            <router-outlet></router-outlet>
+          </section>
+        </div>
+        <!-- /.row (main row) -->
+      </section>
+      <!-- /.content -->
     </div>
   </div>
   <!-- ./wrapper -->

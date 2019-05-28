@@ -1,0 +1,22 @@
+{
+  "menu" : [
+    {
+      "order": 1,
+      "icon": "globe",
+      "description": "Painel de Gestão",
+      "route": "/home"
+    },
+    {
+      "order": 2,
+      "icon": "at",
+      "description": "Conta Digital",
+      "route": "/conta-digital"
+    },
+    {
+      "order": 3,
+      "icon": "chart-bar",
+      "description": "Ant. de Recebíveis",
+      "route": "/antecip-recebiveis"
+    }
+  ]
+}

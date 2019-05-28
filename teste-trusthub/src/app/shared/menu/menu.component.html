@@ -1,3 +1,18 @@
-<p>
-  menu works!
-</p>
+<nav id="sidebar" class="animated fadeInLeft">
+  <div class="sidebar-header">
+    <input class="menu-filter" [(ngModel)]="menuFilter" placeholder="Pesquise Aqui">
+    <button class="get-menu" (click)="getMenu()"><fa-icon icon="search"></fa-icon></button>
+  </div>
+
+  <p *ngIf="loading" class="carregando-menu-msg">
+    <span class="fa fa-spinner"></span> Loading menu...</p>
+  <ul class="sidebar-menu nav nav-stacked" *ngIf="!loading">
+    <li *ngFor="let menuItem of menu; let i = index" routerLinkActive="active" class="nivel1">
+      <a class="flex-row" routerLink="{{ menuItem.route }}" routerLinkActive="active">
+        <fa-icon [icon]="menuItem.icon"></fa-icon>
+        <span flex class="item-title">{{ menuItem.description }}</span>
+        <span class="arrow"></span>
+      </a>
+    </li>
+  </ul>
+</nav>
