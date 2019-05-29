@@ -11,6 +11,7 @@
     padding: 5px;
     padding-right: 20px;
 }
+
 .content-wrapper {
     width: 100%;
 }
@@ -26,7 +27,131 @@
         }
 
         &+.breadcrumb-item::before {
-            content:">";
+            content: ">";
         }
     }
+}
+
+.select {
+    .ng-select {
+        display: inline-block;
+        width: 160px;
+        margin-left: 10px;
+        font-size: 16px;
+        line-height: 22px;
+        border: 1px solid $color-shakespeare;
+        height: 45px;
+        color: $color-gray;
+
+        .ng-select-container {
+            height: 100%;
+            border-radius: 0;
+            border: none;
+            background-color: inherit;
+            box-shadow: none;
+
+            .ng-value-container {
+                .ng-placeholder {
+                    color: $color-gray;
+                }
+            }
+
+            .ng-clear-wrapper {
+                display: none;
+            }
+
+            .ng-arrow-wrapper {
+                .ng-arrow {
+                    background: url("/assets/img/double-arrow-down.png") no-repeat right;
+                    border: none;
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 10px;
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        .ng-dropdown-panel {
+            .ng-option {
+                border-radius: 0;
+
+                .ng-option-label {
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: normal;
+                    color: $color-gray;
+
+                    &:hover,
+                    &:focus {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+app-page-title {
+    display: inline-block;
+}
+
+// cards / box
+
+.card {
+    color: $color-shark;
+
+    .card-header {
+        background-color: $color-white;
+        padding: 30px 30px 20px 30px;
+
+        .card-title {
+            color: $color-shakespeare;
+            float: left;
+            font-weight: 100;
+        }
+        .card-subtitle {
+            margin-top: 5px;
+            float: right;
+        }
+    }
+    .card-body {
+        padding: 0 30px 0 30px;
+    }
+}
+
+// margins
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+// paddings
+
+.padding-left-15 {
+    padding-left: 15px;
+}
+
+.padding-left-40 {
+    padding-left: 40px;
+}
+
+.padding-top-15 {
+    padding-top: 15px;
+}
+
+.padding-top-30 {
+    padding-top: 30px;
+}
+
+.padding-bottom-15 {
+    padding-bottom: 15px;
+}
+
+.padding-bottom-20 {
+    padding-bottom: 20px;
 }

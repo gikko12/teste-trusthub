@@ -4,6 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { PainelGestaoComponent } from './paginas/painel-gestao/painel-gestao.component';
 import { ContaDigitalComponent } from './paginas/conta-digital/conta-digital.component';
 import { AntecipRecebiveisComponent } from './paginas/antecip-recebiveis/antecip-recebiveis.component';
+import { PageTitleModule } from 'app/shared/page-title/page-title.module';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   {
@@ -11,7 +14,8 @@ const appRoutes: Routes = [
     component: PainelGestaoComponent,
     data: {
       breadcrumb: 'Painel de Gestão',
-      showBreadcrumb: true
+      showBreadcrumb: true,
+      idMenu: 1
     }
   },
   {
@@ -19,7 +23,8 @@ const appRoutes: Routes = [
     component: ContaDigitalComponent,
     data: {
       breadcrumb: 'Conta Digital',
-      showBreadcrumb: true
+      showBreadcrumb: true,
+      idMenu: 2
     }
   },
   {
@@ -27,7 +32,8 @@ const appRoutes: Routes = [
     component: AntecipRecebiveisComponent,
     data: {
       breadcrumb: 'Antecipação de Recebíveis',
-      showBreadcrumb: true
+      showBreadcrumb: true,
+      idMenu: 3
     }
   }
 ];
@@ -35,7 +41,11 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forChild(appRoutes),
-    CommonModule
+    CommonModule,
+    FormsModule,
+    NgSelectModule,
+    PageTitleModule,
+    RouterModule
   ],
   declarations: [
     PainelGestaoComponent,

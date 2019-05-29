@@ -1,3 +1,70 @@
-<p>
-  painel-gestao works!
-</p>
+<div class="row row-eq-height">
+  <div class="col-12 d-flex-bottom">
+    <app-page-title></app-page-title>
+
+    <div class="select background-gallery">
+      <span class="title-product">Produto:</span>
+      <ng-select [items]="products" bindLabel="description" bindValue="id" placeholder="Selecione o produto"
+        [(ngModel)]="selectedProduct">
+      </ng-select>
+    </div>
+  </div>
+</div>
+<div class="row margin-top-30 padding-left-15 padding-bottom-20">
+  <div class="col-12 col-lg-6">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Atalhos</h4>
+      </div>
+      <div class="card-body">
+        <div class="row row-eq-height">
+          <div class="col-8 padding-top-30 padding-bottom-20">
+            <span class="card-subtitle d-block">Operacional</span>
+            <button class="shortcut-button">Envio</button>
+            <button class="shortcut-button">Assinatura</button>
+            <button class="shortcut-button">Envio de Duplicatas</button>
+            <button class="shortcut-button">Assinatura Digital</button>
+            <button class="shortcut-button">Nova Operação</button>
+          </div>
+          <div class="col-4 padding-top-30 padding-bottom-20 border-left">
+            <span class="card-subtitle d-block">Geral</span>
+            <button class="shortcut-button w100">Carteira</button>
+            <button class="shortcut-button w100">Instruções</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-lg-6">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Alertas</h4>
+        <span class="card-subtitle">Últimos 5 dias</span>
+      </div>
+      <div class="card-body">
+        <div class="row padding-top-15 padding-bottom-15">
+          <div class="col-4 col-sm-5 col-md-4 col-lg-6">
+            <span class="card-subtitle d-block margin-top-10">{{countCancelledReceipts}} Notas Canceladas</span>
+          </div>
+          <div class="col-7 col-sm-6 col-md-6 col-lg-5">
+            <div class="select">
+              <ng-select [items]="actions" bindLabel="description" bindValue="id" placeholder="Ações">
+              </ng-select>
+            </div>
+          </div>
+        </div>
+        <div class="row padding-top-15 padding-bottom-15 border-top">
+          <div class="col-4 col-sm-5 col-md-4 col-lg-6">
+            <span class="card-subtitle d-block margin-top-10">{{countDigitalSignatures}} Assinaturas Digitais</span>
+          </div>
+          <div class="col-7 col-sm-6 col-md-6 col-lg-5">
+            <div class="select">
+              <ng-select [items]="actions" bindLabel="description" bindValue="id" placeholder="Ações">
+              </ng-select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

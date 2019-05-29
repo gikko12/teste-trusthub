@@ -7,9 +7,11 @@
   </div>
   <div class="offset-lg-1 col-lg-4 offset-md-0 col-md-8 offset-0 col-12 economic-group">
     <span>Grupo Econômico:</span>
-    <ng-select [items]="economicGroups" bindLabel="description" bindValue="id" placeholder="Selecione o grupo econômico"
-      [(ngModel)]="selectedEconomicGroup">
-    </ng-select>
+    <div class="select">
+      <ng-select [items]="economicGroups" bindLabel="description" bindValue="id" placeholder="Selecione o grupo econômico"
+        [(ngModel)]="selectedEconomicGroup">
+      </ng-select>
+    </div>
   </div>
   <div class="col-lg-4 col-md-8 col-12">
     <div class="row row-eq-height user-info">

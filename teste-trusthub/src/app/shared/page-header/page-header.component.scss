@@ -29,62 +29,6 @@
             line-height: 22px;
             color: $color-shark;
         }
-
-        ::ng-deep {
-            .ng-select {
-                width: 180px;
-                margin-left: 10px;
-                font-size: 16px;
-                line-height: 22px;
-                border: 1px solid $color-shakespeare;
-                height: 45px;
-                color: $color-gray;
-
-                .ng-select-container {
-                    height: 100%;
-                    border-radius: 0;
-
-                    .ng-value-container {
-                        .ng-placeholder {
-                            color: $color-gray;
-                        }
-                    }
-
-                    .ng-clear-wrapper {
-                        display: none;
-                    }
-
-                    .ng-arrow-wrapper {
-                        .ng-arrow {
-                            background: url("/assets/img/double-arrow-down.png") no-repeat right $color-white;
-                            border: none;
-                            width: 16px;
-                            height: 16px;
-                            margin-right: 10px;
-                            margin-top: 5px;
-                        }
-                    }
-                }
-
-                .ng-dropdown-panel {
-                    .ng-option {
-                        border-radius: 0;
-
-                        .ng-option-label {
-                            font-size: 14px;
-                            line-height: 20px;
-                            font-weight: normal;
-                            color: $color-gray;
-
-                            &:hover,
-                            &:focus {
-                                font-weight: 600;
-                            }
-                        }
-                    }
-                }
-            }
-        }
         
         @media (max-width: 991px) {
             margin-left: 10px;

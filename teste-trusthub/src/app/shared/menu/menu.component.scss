@@ -26,7 +26,7 @@
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    min-height: calc(100vh - 10px);
+    min-height: 100%;
     background-color: $color-midnight;
     color: $color-white;
 
@@ -53,6 +53,7 @@
         width: 100%;
         padding: 10px 20px 20px 15px;
         border-bottom: 1px solid $color-shakespeare;
+        overflow: hidden;
 
         .flex-row {
             color: $color-white;
@@ -77,8 +78,8 @@
                 width: 25px;
                 height: 25px;
                 transform: rotate(45deg);
-                position: absolute;
-                left: 95%;
+                position: relative;
+                left: 104%;
                 margin-top: -25px;
                 z-index: 1;
             }

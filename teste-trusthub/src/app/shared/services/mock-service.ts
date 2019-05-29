@@ -20,6 +20,14 @@ export class MockService {
         return this.http.get(basePath);
     }
 
+    getMenuItem(
+        id: number,
+        basePath = this.basePath + '/menu/'
+    ): Observable<any> {
+        basePath += id;
+        return this.http.get(basePath);
+    }
+
     getEconomicGroups(
         basePath = this.basePath + '/economic-group?_sort=id%_order=asc'
     ): Observable<any> {
@@ -36,7 +44,7 @@ export class MockService {
 
     getCountNotifications(
         basePath = this.basePath + '/notifications'
-    ) {
+    ): Observable<number> {
         return this.http.get(basePath)
             .pipe(
                 map(response => {
@@ -50,7 +58,47 @@ export class MockService {
 
     getNotifications(
         basePath = this.basePath + '/notifications?_sort=id%_order=asc'
-    ) {
+    ): Observable<any> {
+        return this.http.get(basePath);
+    }
+
+    getProducts(
+        basePath = this.basePath + '/products?_sort=id%_order=asc'
+    ): Observable<any> {
+        return this.http.get(basePath);
+    }
+
+    getCountCancelledReceipts(
+        basePath = this.basePath + '/cancelled-receipts'
+    ): Observable<number> {
+        return this.http.get(basePath)
+            .pipe(
+                map(response => {
+                    if (response) {
+                        return response['length'];
+                    }
+                    return 0;
+                })
+            );
+    }
+
+    getCountDigitalSignatures(
+        basePath = this.basePath + '/digital-signatures'
+    ): Observable<number> {
+        return this.http.get(basePath)
+            .pipe(
+                map(response => {
+                    if (response) {
+                        return response['length'];
+                    }
+                    return 0;
+                })
+            );
+    }
+
+    getActions(
+        basePath = this.basePath + '/actions?_sort=id%_order=asc'
+    ): Observable<any> {
         return this.http.get(basePath);
     }
 }
