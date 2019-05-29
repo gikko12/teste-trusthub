@@ -1,0 +1,28 @@
+<section>
+  <div class="wrapper">
+    <app-menu [openMenu]="openMenu" (menuToogle)="toogleMenu($event)"></app-menu>
+
+    <div class="content-wrapper flex">
+      <section class="content">
+        <app-page-header [openMenu]="openMenu" (menuToogle)="toogleMenu($event)"></app-page-header>
+        <div class="row">
+          <section class="col-12">
+            <ol class="breadcrumb">
+              <li *ngFor="let breadcrumb of breadcrumbs$ | async" class="breadcrumb-item">
+                <a [routerLink]="[breadcrumb.url, breadcrumb.params]">
+                  {{ breadcrumb.label }}
+                </a>
+              </li>
+            </ol>
+          </section>
+        </div>
+        <div class="row">
+          <section class="col-12">
+            <router-outlet></router-outlet>
+          </section>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- ./wrapper -->
+</section>

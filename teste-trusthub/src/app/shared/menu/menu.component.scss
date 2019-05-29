@@ -1,0 +1,107 @@
+@import 'src/app/shared/styles/variables';
+
+.carregando-menu-msg {
+    padding: 15px;
+    text-align: center;
+}
+
+.menu-filter {
+    height: 35px;
+    border: none;
+    font-size: 18px;
+    line-height: 24px;
+    color: $color-gray;
+    width: 70%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+::ng-deep {
+    .get-menu {
+        color: $color-gray;
+        font-size: 22px;
+    }
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100%;
+    background-color: $color-midnight;
+    color: $color-white;
+
+    &.closed {
+        margin-left: -250px;
+    }
+
+    .sidebar-header {
+        padding: 15px 0;
+        background-color: $color-white;
+        border-right: 2px solid $color-gallery;
+
+        ::ng-deep {
+            .icon-menu {
+                color: $color-gray;
+                font-size: 22px;
+                margin-left: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .menu-item {
+        width: 100%;
+        padding: 10px 20px 20px 15px;
+        border-bottom: 1px solid $color-shakespeare;
+        overflow: hidden;
+
+        .flex-row {
+            color: $color-white;
+
+            ::ng-deep {
+                .item-icon {
+                    font-size: 30px !important;
+                    position: relative !important;
+                    top: 5px !important;
+                    margin-right: 5px !important;
+                }
+            }
+
+            .item-description {
+                text-decoration: none;
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+            .item-active {
+                display: none;
+                width: 25px;
+                height: 25px;
+                transform: rotate(45deg);
+                position: relative;
+                left: 104%;
+                margin-top: -25px;
+                z-index: 1;
+            }
+
+            &.active {
+                .item-active {
+                    background-color: $color-gallery;
+                    display: block;
+                }
+            }
+
+            &:hover {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        & {
+            position: absolute;
+            z-index: 3;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+<nav id="sidebar" class="animated {{openMenu ? 'fadeInLeft' : 'fadeOutLeft'}}" [class.closed]="!openMenu">
+  <div class="sidebar-header">
+    <fa-icon [icon]="['fas', 'times']" [classes]="['icon-menu']" tabindex="0" (click)="toogleMenu()"></fa-icon>
+    <input class="menu-filter" [(ngModel)]="text" (ngModelChange)="changeFilter($event)" placeholder="Pesquise Aqui">
+    <fa-icon icon="search" [classes]="['get-menu']"></fa-icon>
+  </div>
+
+  <p *ngIf="loading" class="carregando-menu-msg">
+    <span class="fa fa-spinner"></span> Loading menu...</p>
+  <ul class="sidebar-menu nav nav-stacked" *ngIf="!loading">
+    <li *ngFor="let menuItem of menu; let i = index" routerLinkActive="active" class="menu-item">
+      <a class="flex-row" routerLink="{{ menuItem.route }}" routerLinkActive="active">
+        <fa-icon [icon]="menuItem.icon" [classes]="['item-icon']"></fa-icon>
+        <span flex class="item-description">{{ menuItem.description }}</span>
+        <span class="item-active"></span>
+      </a>
+    </li>
+  </ul>
+</nav>

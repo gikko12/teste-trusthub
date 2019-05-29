@@ -1,0 +1,41 @@
+<div class="row header">
+  <div class="col-lg-1 col-md-2 col-3">
+    <fa-icon *ngIf="!openMenu" [icon]="['fas', 'bars']" [classes]="['icon-menu']" tabindex="0" (click)="toogleMenu()">
+    </fa-icon>
+  </div>
+  <div class="col-lg-2 col-md-6 col-4">
+    <img class="logo" src="assets/img/logo.png" aria-hidden="true">
+  </div>
+  <div class="offset-lg-1 col-lg-4 offset-md-0 col-md-8 offset-0 col-12 economic-group">
+    <span>Grupo Econômico:</span>
+    <div class="select">
+      <ng-select [items]="economicGroups" bindLabel="description" bindValue="id"
+        placeholder="Selecione o grupo econômico" [(ngModel)]="selectedEconomicGroup">
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-8 col-12">
+    <div class="row row-eq-height user-info">
+      <div class="col-10 user-data">
+        <fa-icon [icon]="['far', 'user']" [classes]="['icon-user']"></fa-icon>
+        <span>{{user?.name}}</span>
+        <button class="button-icon" (click)="toogleUserInfoDetail()">
+            <fa-icon [icon]="['fas', 'angle-double-down']" [classes]="['icon-details']"></fa-icon>
+        </button>
+        <div *ngIf="userInfoDetail" class="col-12 position-absolute user-info-detail">
+          <p>E-mail: {{user?.email}}</p>
+          <p>Telefone: {{user?.phone}}</p>
+        </div>
+      </div>
+      <div class="col-2 notification" (click)="toogleNotificationDetail()">
+        <button class="button-icon">
+          <fa-icon [icon]="['far', 'bell']" [classes]="['icon-notification']"></fa-icon>
+        </button>
+        <span *ngIf="countNotifications" class="count-notifications">{{countNotifications}}</span>
+        <div *ngIf="notificationDetail" class="col-12 position-absolute notification-detail">
+            <p *ngFor="let notification of notifications">Assunto: {{notification.subject}}</p>          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

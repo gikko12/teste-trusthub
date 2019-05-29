@@ -1,0 +1,125 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "order": 1,
+      "icon": "globe",
+      "description": "Painel de Gestão",
+      "route": "/home/painel-gestao"
+    },
+    {
+      "id": 2,
+      "order": 2,
+      "icon": "at",
+      "description": "Conta Digital",
+      "route": "/home/conta-digital"
+    },
+    {
+      "id": 3,
+      "order": 3,
+      "icon": "chart-bar",
+      "description": "Ant. de Recebíveis",
+      "route": "/home/antecip-recebiveis"
+    }
+  ],
+  "economic-group": [
+    {
+      "id": 1,
+      "description": "Visão Agregada 1"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Sandra Oliveira",
+      "email": "sandra.oliveira@srm.com.br",
+      "phone": "(11) 98752-9844"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "subject": "Teste 1"
+    },
+    {
+      "id": 2,
+      "subject": "Teste 2"
+    },
+    {
+      "id": 3,
+      "subject": "Teste 3"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "description": "Todos"
+    }
+  ],
+  "actions": [
+    {
+      "id": 1,
+      "description": "Visualizar"
+    },
+    {
+      "id": 2,
+      "description": "Deletar"
+    }
+  ],
+  "cancelled-receipts": [
+    {
+      "id": 1,
+      "description": "Nota 1"
+    },
+    {
+      "id": 2,
+      "description": "Nota 2"
+    },
+    {
+      "id": 3,
+      "description": "Nota 3"
+    },
+    {
+      "id": 4,
+      "description": "Nota 4"
+    },
+    {
+      "id": 5,
+      "description": "Nota 5"
+    }
+  ],
+  "digital-signatures": [
+    {
+      "id": 1,
+      "description": "Assinatura 1"
+    },
+    {
+      "id": 2,
+      "description": "Assinatura 2"
+    },
+    {
+      "id": 3,
+      "description": "Assinatura 3"
+    },
+    {
+      "id": 4,
+      "description": "Assinatura 4"
+    },
+    {
+      "id": 5,
+      "description": "Assinatura 5"
+    },
+    {
+      "id": 6,
+      "description": "Assinatura 6"
+    },
+    {
+      "id": 7,
+      "description": "Assinatura 7"
+    },
+    {
+      "id": 8,
+      "description": "Assinatura 8"
+    }
+  ]
+}
