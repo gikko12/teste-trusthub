@@ -36,7 +36,29 @@ export class MenuComponent implements OnInit, OnDestroy {
       )
       .subscribe(
         () => { },
-        err => console.log(err)
+        err => this.menu = [
+          {
+            "id": 1,
+            "order": 1,
+            "icon": "globe",
+            "description": "Painel de Gestão",
+            "route": "/home/painel-gestao"
+          },
+          {
+            "id": 2,
+            "order": 2,
+            "icon": "at",
+            "description": "Conta Digital",
+            "route": "/home/conta-digital"
+          },
+          {
+            "id": 3,
+            "order": 3,
+            "icon": "chart-bar",
+            "description": "Ant. de Recebíveis",
+            "route": "/home/antecip-recebiveis"
+          }
+        ]
       );
     this.filter.next('');
   }
@@ -52,7 +74,29 @@ export class MenuComponent implements OnInit, OnDestroy {
         finalize(() => this.loading = false),
         map(
           menu => this.menu = menu,
-          err => console.log(err)
+          err => this.menu = [
+            {
+              "id": 1,
+              "order": 1,
+              "icon": "globe",
+              "description": "Painel de Gestão",
+              "route": "/home/painel-gestao"
+            },
+            {
+              "id": 2,
+              "order": 2,
+              "icon": "at",
+              "description": "Conta Digital",
+              "route": "/home/conta-digital"
+            },
+            {
+              "id": 3,
+              "order": 3,
+              "icon": "chart-bar",
+              "description": "Ant. de Recebíveis",
+              "route": "/home/antecip-recebiveis"
+            }
+          ]
         )
       )
   }

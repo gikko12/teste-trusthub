@@ -18,7 +18,37 @@ export class PageTitleComponent implements OnInit {
       this.mockService.getMenuItem(this.activatedRoute.routeConfig.data['idMenu'])
         .subscribe(
           menuItem => this.menuItem = menuItem,
-          err => console.log(err)
+          err => {
+            switch (this.activatedRoute.routeConfig.data['idMenu']) {
+              case 1:
+                this.menuItem = {
+                  "id": 1,
+                  "order": 1,
+                  "icon": "globe",
+                  "description": "Painel de Gestão",
+                  "route": "/home/painel-gestao"
+                };
+                break;
+              case 2:
+                  this.menuItem = {
+                    "id": 2,
+                    "order": 2,
+                    "icon": "at",
+                    "description": "Conta Digital",
+                    "route": "/home/conta-digital"
+                  };
+                break;
+              case 3:
+                  this.menuItem = {
+                    "id": 3,
+                    "order": 3,
+                    "icon": "chart-bar",
+                    "description": "Ant. de Recebíveis",
+                    "route": "/home/antecip-recebiveis"
+                  };
+                break;
+            }
+          }
         );
     }
   }

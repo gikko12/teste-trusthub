@@ -95,5 +95,43 @@
             margin-left: -5px;
             margin-bottom: 10px;
         }
+
+        .button-icon {
+            border: none;
+            box-shadow: none;
+            background-color: inherit;
+            height: 100%;
+        }
+
+        .position-absolute {
+            position: absolute;
+        }
+
+        .user-info-detail {
+            min-height: 100px;
+            background-color: $color-midnight;
+            top: 45px;
+            left: 0px;
+            padding-top: 15px;
+            p {
+                font-size: 16px;
+                line-height: 22px;
+                color: $color-white;
+            }
+        }
+        .notification-detail {
+            width: 300px;
+            max-width: 300px;
+            min-height: 100px;
+            background-color: $color-shakespeare;
+            top: 45px;
+            right: 0px;
+            padding-top: 15px;
+            p {
+                font-size: 16px;
+                line-height: 22px;
+                color: $color-white;
+            }
+        }
     }
 }

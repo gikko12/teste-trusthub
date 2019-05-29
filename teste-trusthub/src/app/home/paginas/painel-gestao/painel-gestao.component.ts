@@ -35,7 +35,16 @@ export class PainelGestaoComponent implements OnInit {
       )
       .subscribe(
         actions => this.actions = actions,
-        err => console.log(err)
+        err => this.actions = [
+          {
+            "id": 1,
+            "description": "Visualizar"
+          },
+          {
+            "id": 2,
+            "description": "Deletar"
+          }
+        ]
       );
   }
 
@@ -47,7 +56,12 @@ export class PainelGestaoComponent implements OnInit {
       )
       .subscribe(
         products => this.products = products,
-        err => console.log(err)
+        err => this.products = [
+          {
+            "id": 1,
+            "description": "Todos"
+          }
+        ]
       );
   }
 
@@ -59,7 +73,7 @@ export class PainelGestaoComponent implements OnInit {
       )
       .subscribe(
         countCancelledReceipts => this.countCancelledReceipts = countCancelledReceipts,
-        err => console.log(err)
+        err => this.countCancelledReceipts = 5
       );
   }
 
@@ -71,7 +85,7 @@ export class PainelGestaoComponent implements OnInit {
       )
       .subscribe(
         countDigitalSignatures => this.countDigitalSignatures = countDigitalSignatures,
-        err => console.log(err)
+        err => this.countDigitalSignatures = 8
       );
   }
 }

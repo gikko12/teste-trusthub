@@ -16,7 +16,10 @@ export class PageHeaderComponent implements OnInit {
   economicGroups: any[];
   loading = false;
   user: any;
+  notifications: any[];
   countNotifications: number;
+  userInfoDetail = false;
+  notificationDetail = false;
 
   constructor(
     private mockService: MockService
@@ -26,6 +29,7 @@ export class PageHeaderComponent implements OnInit {
     this.getEconomicGroups();
     this.getUser();
     this.getCountNotifications();
+    this.getNotifications();
   }
 
   toogleMenu() {
@@ -41,7 +45,12 @@ export class PageHeaderComponent implements OnInit {
       )
       .subscribe(
         economicGroups => this.economicGroups = economicGroups,
-        err => console.log(err)
+        err => this.economicGroups = [
+          {
+            "id": 1,
+            "description": "Visão Agregada 1"
+          }
+        ]
       );
   }
 
@@ -53,7 +62,12 @@ export class PageHeaderComponent implements OnInit {
       )
       .subscribe(
         user => this.user = user,
-        err => console.log(err)
+        err => this.user = {
+          "id": 1,
+          "name": "Sandra Oliveira",
+          "email": "sandra.oliveira@srm.com.br",
+          "phone": "(11) 98752-9844"
+        }
       );
   }
 
@@ -65,7 +79,42 @@ export class PageHeaderComponent implements OnInit {
       )
       .subscribe(
         count => this.countNotifications = count,
-        err => console.log(err)
+        err => this.countNotifications = 3
       );
+  }
+
+  getNotifications() {
+    this.loading = true;
+    this.mockService.getNotifications()
+      .pipe(
+        finalize(() => this.loading = false)
+      )
+      .subscribe(
+        notifications => this.notifications = notifications,
+        err => this.notifications = [
+          {
+            "id": 1,
+            "subject": "Teste"
+          },
+          {
+            "id": 2,
+            "subject": "Teste"
+          },
+          {
+            "id": 3,
+            "subject": "Teste"
+          }
+        ]
+      );
+  }
+
+  toogleUserInfoDetail() {
+    this.userInfoDetail = !this.userInfoDetail;
+    this.notificationDetail = false;
+  }
+  
+  toogleNotificationDetail() {
+    this.notificationDetail = !this.notificationDetail;
+    this.userInfoDetail = false;
   }
 }
