@@ -16,11 +16,9 @@
     padding-right: 10px;
 }
 
-::ng-deep {
-    .get-menu {
-        color: $color-gray;
-        font-size: 22px;
-    }
+.get-menu {
+    color: $color-gray;
+    font-size: 22px;
 }
 
 #sidebar {
@@ -39,13 +37,11 @@
         background-color: $color-white;
         border-right: 2px solid $color-gallery;
 
-        ::ng-deep {
-            .icon-menu {
-                color: $color-gray;
-                font-size: 22px;
-                margin-left: 15px;
-                cursor: pointer;
-            }
+        .icon-menu {
+            color: $color-gray;
+            font-size: 22px;
+            margin-left: 15px;
+            cursor: pointer;
         }
     }
 
@@ -58,13 +54,11 @@
         .flex-row {
             color: $color-white;
 
-            ::ng-deep {
-                .item-icon {
-                    font-size: 30px !important;
-                    position: relative !important;
-                    top: 5px !important;
-                    margin-right: 5px !important;
-                }
+            .item-icon {
+                font-size: 30px !important;
+                position: relative !important;
+                top: 5px !important;
+                margin-right: 5px !important;
             }
 
             .item-description {

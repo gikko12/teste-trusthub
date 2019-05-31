@@ -7,12 +7,10 @@
     z-index: 2;
     position: relative;
 
-    ::ng-deep {
-        .icon-menu {
-            font-size: 40px;
-            margin: 10px 20px;
-            cursor: pointer;
-        }
+    .icon-menu {
+        font-size: 40px;
+        margin: 10px 20px;
+        cursor: pointer;
     }
 
     .logo {
@@ -29,7 +27,7 @@
             line-height: 22px;
             color: $color-shark;
         }
-        
+
         @media (max-width: 991px) {
             margin-left: 10px;
         }
@@ -47,17 +45,16 @@
             align-items: center;
             justify-content: space-between;
 
-            ::ng-deep {
-                .icon-user {
-                    margin-left: 10px;
-                    font-size: 12px;
-                }
+            .icon-user {
+                margin-left: 10px;
+                font-size: 12px;
+            }
 
-                .icon-details {
-                    margin-right: 20px;
-                    color: $color-shakespeare;
-                    cursor: pointer;
-                }
+            .icon-details {
+                margin-right: 20px;
+                color: $color-shakespeare;
+                cursor: pointer;
+                font-size: 24px;
             }
         }
 
@@ -67,19 +64,17 @@
             height: 45px;
             margin-top: 10px;
 
-            ::ng-deep {
-                .icon-notification {
-                    margin: 12px 5px;
-                    font-size: 20px;
-                    cursor: pointer;
-                }
+            .icon-notification {
+                margin: 12px 10px;
+                font-size: 20px;
+                cursor: pointer;
             }
 
             .count-notifications {
                 text-align: center;
                 display: block;
-                width: 15px;
-                height: 15px;
+                width: 18px;
+                height: 18px;
                 border-radius: 50%;
                 background-color: $color-red;
                 color: $color-white;
@@ -87,10 +82,10 @@
                 line-height: 14px;
                 position: relative;
                 bottom: 40px;
-                left: 10px;
+                left: 23px;
             }
         }
-        
+
         @media (max-width: 991px) {
             margin-left: -5px;
             margin-bottom: 10px;
@@ -113,12 +108,14 @@
             top: 45px;
             left: 0px;
             padding-top: 15px;
+
             p {
                 font-size: 16px;
                 line-height: 22px;
                 color: $color-white;
             }
         }
+
         .notification-detail {
             width: 300px;
             max-width: 300px;
@@ -127,6 +124,7 @@
             top: 45px;
             right: 0px;
             padding-top: 15px;
+
             p {
                 font-size: 16px;
                 line-height: 22px;
